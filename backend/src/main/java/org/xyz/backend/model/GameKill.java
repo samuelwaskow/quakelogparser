@@ -1,29 +1,41 @@
 package org.xyz.backend.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "game_kill")
 @NoArgsConstructor
-@AllArgsConstructor
 public final class GameKill {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
+
     private String player;
 
     private int kills;
 
-    public void increaseKills(){
+    /**
+     * Default Constructor
+     *
+     * @param player Player's name
+     * @param kills Player's number of kills
+     */
+    public GameKill(final String player, final int kills) {
+        this.player = player;
+        this.kills = kills;
+    }
+
+    public void increaseKills() {
         this.kills++;
     }
 
-    public void decreaseKills(){
+    public void decreaseKills() {
         this.kills--;
     }
 }

@@ -3,6 +3,7 @@ package org.xyz.backend.service;
 import jakarta.annotation.PostConstruct;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
@@ -26,11 +27,15 @@ public final class ParserService {
     private static final String TARGET = "killed";
     private static final String NOT_A_PLAYER = "<world>";
     private final Map<String, GameDTO> games = new HashMap<>();
+    private final List<Game> models = new ArrayList<>();
 
     private Game currentGame;
 
     @Value("${app.data}")
     private Resource logFile;
+
+    @Autowired
+    private AccessService accessService;
 
     /**
      * Reads a games.log upon the application initialization anc construct a list of games models
@@ -44,6 +49,7 @@ public final class ParserService {
             while ((line = reader.readLine()) != null) {
                 parseLine(line);
             }
+            accessService.saveAll(models);
         } catch (IOException e) {
             throw new RuntimeException("The log file can not be read", e);
         }
@@ -78,7 +84,7 @@ public final class ParserService {
     private void newGame() {
 
         if (currentGame != null) {
-            games.put(currentGame.getId(), mapToDTO(currentGame));
+            store();
         }
         currentGame = new Game("game_" + (games.size() + 1));
     }
@@ -88,9 +94,17 @@ public final class ParserService {
      */
     private void endGame() {
         if (currentGame != null) {
-            games.put(currentGame.getId(), mapToDTO(currentGame));
+            store();
             currentGame = null;
         }
+    }
+
+    /**
+     * Stores and converts the model
+     */
+    private void store() {
+        games.put(currentGame.getId(), mapToDTO(currentGame));
+        models.add(currentGame);
     }
 
     /**
