@@ -15,7 +15,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Service
 @Data
@@ -103,7 +102,7 @@ public final class ParserService {
      * Stores and converts the model
      */
     private void store() {
-        games.put(currentGame.getId(), mapToDTO(currentGame));
+        games.put(currentGame.getId(), accessService.mapToDTO(currentGame));
         models.add(currentGame);
     }
 
@@ -170,23 +169,5 @@ public final class ParserService {
         return currentGame.getKills().stream()
                 .filter(gk -> who.equals(gk.getPlayer()))
                 .findFirst();
-    }
-
-    /**
-     * Converts the Game model to a DTO
-     *
-     * @param game Model
-     * @return DTO
-     */
-    public GameDTO mapToDTO(final Game game) {
-        return GameDTO.builder()
-                .name(game.getId())
-                .totalKills(game.getTotalKills())
-                .players(game.getKills().stream()
-                        .map(GameKill::getPlayer)
-                        .toList())
-                .kills(game.getKills().stream()
-                        .collect(Collectors.toMap(GameKill::getPlayer, GameKill::getKills)))
-                .build();
     }
 }

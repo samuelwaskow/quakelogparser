@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50feb52f-e4d0-4023-ad30-6aa1499affaa" name="Changes" comment="Task 2 - Persisting all models in the H2 database">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/repository/AccessRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/AccessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/org/xyz/backend/service/AccessServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="50feb52f-e4d0-4023-ad30-6aa1499affaa" name="Changes" comment="Task 3 - Implemented REST API - GET endpoint returning all parsed results from the database">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/controller/AccessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/org/xyz/backend/controller/AccessControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/model/GameKill.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/model/GameKill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/AccessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/AccessService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/ParserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/ParserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/org/xyz/backend/service/AccessServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/xyz/backend/service/AccessServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/org/xyz/backend/service/ParserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/xyz/backend/service/ParserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,43 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AccessServiceTest.shouldPersistAllModels">
+  <component name="RunManager" selected="Application.BackendApplication">
+    <configuration name="BackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.xyz.backend.BackendApplication" />
+      <module name="backend.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.xyz.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccessControllerTest.testGetAllDTOs" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/backend" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.xyz.backend.controller.AccessControllerTest.testGetAllDTOs&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="AccessServiceTest.shouldPersistAllModels" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -102,98 +137,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.xyz.backend.service.AccessServiceTest.shouldPersistAllModels&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ParserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/backend" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.xyz.backend.service.ParserServiceTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ParserServiceTest.shouldCheckEndingGameMarks" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/backend" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.xyz.backend.service.ParserServiceTest.shouldCheckEndingGameMarks&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ParserServiceTest.shouldLoseKillWhenDiesByWorld" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/backend" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.xyz.backend.service.ParserServiceTest.shouldLoseKillWhenDiesByWorld&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ParserServiceTest.shouldMapModelToDTO" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/backend" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.xyz.backend.service.ParserServiceTest.shouldMapModelToDTO&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -224,13 +167,42 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Tests in 'backend'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/backend" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="All in QuakeLogParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuakeLogParser" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BackendApplication" />
+        <item itemvalue="Gradle.Tests in 'backend'" />
+        <item itemvalue="Gradle.AccessControllerTest.testGetAllDTOs" />
+        <item itemvalue="JUnit.All in QuakeLogParser" />
         <item itemvalue="Gradle.AccessServiceTest.shouldPersistAllModels" />
-        <item itemvalue="Gradle.ParserServiceTest.shouldMapModelToDTO" />
-        <item itemvalue="Gradle.ParserServiceTest.shouldLoseKillWhenDiesByWorld" />
-        <item itemvalue="Gradle.ParserServiceTest" />
-        <item itemvalue="Gradle.ParserServiceTest.shouldCheckEndingGameMarks" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678298722822</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Task 2 - Persisting all models in the H2 database">
+      <created>1678301652497</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678301652497</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,6 +263,7 @@
     <MESSAGE value="Task 1 - Reading the log file upon the application initialization." />
     <MESSAGE value="Task 1 - Finished implemented the ParserService and its tests" />
     <MESSAGE value="Task 2 - Persisting all models in the H2 database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 2 - Persisting all models in the H2 database" />
+    <MESSAGE value="Task 3 - Implemented REST API - GET endpoint returning all parsed results from the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 3 - Implemented REST API - GET endpoint returning all parsed results from the database" />
   </component>
 </project>
