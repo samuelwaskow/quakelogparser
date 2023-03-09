@@ -4,34 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50feb52f-e4d0-4023-ad30-6aa1499affaa" name="Changes" comment="Task 3 - Implemented REST API - GET endpoint returning all parsed results from the database">
-      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="50feb52f-e4d0-4023-ad30-6aa1499affaa" name="Changes" comment="Task 4 - Implemented the GameList and PlayerRanking (calculated in the frontend)">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/GameList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/PlayerRanking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/controller/AccessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/repository/AccessRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/repository/GameRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/AccessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/ParserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/ParserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/org/xyz/backend/controller/AccessControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/xyz/backend/controller/GameControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/org/xyz/backend/service/AccessServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/xyz/backend/service/GameServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/xyz/backend/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +89,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'backend'">
+  <component name="RunManager" selected="Gradle.Run Spring Boot">
     <configuration name="BackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.xyz.backend.BackendApplication" />
       <module name="backend.main" />
@@ -133,29 +117,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.xyz.backend.controller.AccessControllerTest.testGetAllDTOs&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="AccessServiceTest.shouldPersistAllModels" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/backend" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.xyz.backend.service.AccessServiceTest.shouldPersistAllModels&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,6 +168,14 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="All in QuakeLogParser (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuakeLogParser" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in QuakeLogParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuakeLogParser" />
       <option name="PACKAGE_NAME" value="" />
@@ -218,10 +187,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'backend'" />
+        <item itemvalue="JUnit.All in QuakeLogParser (1)" />
         <item itemvalue="Application.BackendApplication" />
         <item itemvalue="Gradle.AccessControllerTest.testGetAllDTOs" />
         <item itemvalue="JUnit.All in QuakeLogParser" />
-        <item itemvalue="Gradle.AccessServiceTest.shouldPersistAllModels" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678304695842</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Task 4 - Renamed backend classes to the project's name and created the frontend project">
+      <created>1678365008704</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678365008704</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,6 +266,8 @@
     <MESSAGE value="Task 1 - Finished implemented the ParserService and its tests" />
     <MESSAGE value="Task 2 - Persisting all models in the H2 database" />
     <MESSAGE value="Task 3 - Implemented REST API - GET endpoint returning all parsed results from the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 3 - Implemented REST API - GET endpoint returning all parsed results from the database" />
+    <MESSAGE value="Task 4 - Renamed backend classes to the project's name and created the frontend project" />
+    <MESSAGE value="Task 4 - Implemented the GameList and PlayerRanking (calculated in the frontend)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 4 - Implemented the GameList and PlayerRanking (calculated in the frontend)" />
   </component>
 </project>

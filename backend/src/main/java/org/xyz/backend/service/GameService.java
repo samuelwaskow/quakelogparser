@@ -7,7 +7,9 @@ import org.xyz.backend.model.Game;
 import org.xyz.backend.model.GameKill;
 import org.xyz.backend.repository.GameRepository;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -28,13 +30,12 @@ public final class GameService {
     /**
      * Find all DTO models
      *
-     * @return List of DTOs
+     * @return Map of DTOs
      */
-    public List<GameDTO> findAll() {
+    public Map<String, GameDTO> findAll() {
         final List<Game> models = repository.findAll();
         return models.stream()
-                .map(this::mapToDTO)
-                .toList();
+                .collect(Collectors.toMap(Game::getId, this::mapToDTO, (key1, key2) -> key1, LinkedHashMap::new));
     }
 
     /**

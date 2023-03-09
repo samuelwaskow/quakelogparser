@@ -64,7 +64,7 @@ These classes define the data transfer objects available for the parser and the 
 
 * `frontend/src/*`
 
-These files define the React JS frontend for the project. The frontend is organized into components, each of which has its own directory. The main components are:
+These files define the React JS frontend for the project. The main components are:
 
 - `App.js`: the main application component
 - `GameList.js`: a component that displays a list of game events
