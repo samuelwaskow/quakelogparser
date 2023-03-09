@@ -5,16 +5,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.xyz.backend.dto.GameDTO;
-import org.xyz.backend.service.AccessService;
+import org.xyz.backend.service.GameService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("games")
-public final class AccessController {
+public final class GameController {
 
     @Autowired
-    private AccessService service;
+    private GameService service;
 
     @GetMapping
     public List<GameDTO> findAll() {

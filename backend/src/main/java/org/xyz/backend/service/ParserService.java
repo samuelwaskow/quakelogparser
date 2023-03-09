@@ -34,7 +34,7 @@ public final class ParserService {
     private Resource logFile;
 
     @Autowired
-    private AccessService accessService;
+    private GameService gameService;
 
     /**
      * Reads a games.log upon the application initialization anc construct a list of games models
@@ -48,7 +48,7 @@ public final class ParserService {
             while ((line = reader.readLine()) != null) {
                 parseLine(line);
             }
-            accessService.saveAll(models);
+            gameService.saveAll(models);
         } catch (IOException e) {
             throw new RuntimeException("The log file can not be read", e);
         }
@@ -102,7 +102,7 @@ public final class ParserService {
      * Stores and converts the model
      */
     private void store() {
-        games.put(currentGame.getId(), accessService.mapToDTO(currentGame));
+        games.put(currentGame.getId(), gameService.mapToDTO(currentGame));
         models.add(currentGame);
     }
 

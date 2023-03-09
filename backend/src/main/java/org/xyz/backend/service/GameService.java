@@ -5,16 +5,16 @@ import org.springframework.stereotype.Service;
 import org.xyz.backend.dto.GameDTO;
 import org.xyz.backend.model.Game;
 import org.xyz.backend.model.GameKill;
-import org.xyz.backend.repository.AccessRepository;
+import org.xyz.backend.repository.GameRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public final class AccessService {
+public final class GameService {
 
     @Autowired
-    private AccessRepository repository;
+    private GameRepository repository;
 
     /**
      * Persists a list of games

@@ -18,10 +18,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @SpringBootTest
-public class AccessServiceTest {
+public class GameServiceTest {
 
     @Autowired
-    private AccessService service;
+    private GameService service;
 
     @Autowired
     private ObjectMapper mapper;

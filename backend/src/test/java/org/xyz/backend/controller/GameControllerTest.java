@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public final class AccessControllerTest {
+public final class GameControllerTest {
 
     @Autowired
     private ParserService service;
